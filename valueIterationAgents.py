@@ -211,10 +211,10 @@ class PrioritizedSweepingValueIterationAgent(AsynchronousValueIterationAgent):
         "*** YOUR CODE HERE ***"
         states = self.mdp.getStates()
 
-        # Initialize precessor dict and with empty lists
+        # Initialize predecessor dict and with empty sets
         predecessors = {s: set() for s in states}
         
-        # Append lists in predecessor dict as needed
+        # Add to sets in predecessor dict as needed
         for s in states:
             actions = self.mdp.getPossibleActions(s)
             for action in actions:
